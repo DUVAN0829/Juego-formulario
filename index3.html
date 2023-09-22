@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkbox Personalizado</title>
+    <style>
+        .custom-checkbox {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .custom-checkbox input {
+            display: none;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .custom-checkbox input:checked + .checkmark:after {
+            display: block;
+        }
+
+        .custom-checkbox .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid #000;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        .custom-checkbox input {
+    display: none;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee; /* Color de fondo del checkbox */
+    border: 1px solid #ccc; /* Borde del checkbox */
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-checkbox input:checked + .checkmark:after {
+    display: block;
+}
+
+.custom-checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #000; /* Color del símbolo del checkbox */
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Personaliza los márgenes aquí */
+.custom-checkbox {
+    margin-bottom: 10px; /* Ejemplo de margen inferior */
+}
+
+    </style>
+</head>
+<body>
+    <label class="custom-checkbox">
+        <input type="checkbox">
+        <span class="checkmark"></span> Checkbox 1
+    </label>
+    <label class="custom-checkbox">
+        <input type="checkbox">
+        <span class="checkmark"></span> Checkbox 2
+    </label>
+    <label class="custom-checkbox">
+        <input type="checkbox">
+        <span class="checkmark"></span> Checkbox 3
+    </label>
+    <label class="custom-checkbox">
+        <input type="checkbox">
+        <span class="checkmark"></span> Checkbox 4
+    </label>
+</body>
+</html>

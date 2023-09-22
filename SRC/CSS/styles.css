@@ -1,0 +1,134 @@
+/* * Variables css */
+:root {
+    --morado-oscuro: #4A154B;
+    --morado-claro: #A94AB4;
+    --blanco: #fff;
+    --negro: #000;
+
+    --fuente-titulo: 'Lilita One', cursive;
+}
+
+
+/* * Globales */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    /* * 1 rem == 10px*/
+    background: var(--morado-oscuro);
+}
+
+p{
+    text-align: center;
+}
+
+/* *Contenedor */
+.contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+/* * titulo */
+.titulo {
+    font-family: var(--fuente-titulo);
+    text-align: center;
+    font-size: 6rem;
+    color: var(--blanco);
+    -webkit-text-stroke: 2px var(--negro);
+}
+
+
+/* * Imagén cine */
+.imagen-cine {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* * flechas */
+.flecha,
+.Pagina-Actual {
+    color: var(--blanco);
+}
+
+
+/* * Contenedor Preguntas */
+.contenedor-pregunta {
+    position: relative;
+    height: 18rem;
+    width: 75rem;
+    background-color: var(--blanco);
+    border: solid var(--morado-claro) 5px;
+}
+
+
+.adorno {
+    width: 200px;
+    height: 100px;
+    background-color: var(--morado-claro);
+    clip-path: polygon(0 0, 76% 0, 75% 70%, 0% 90%);
+    position: absolute;
+    left: -2.5%;
+    top: -8%;
+}
+
+
+.pregunta {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 3rem;
+    font-family: var(--fuente-titulo);
+}
+
+
+svg {
+    display: block;
+    display: flex;
+    margin-left: 4rem;
+    margin-top: 0.5rem;
+}
+
+/* *Respuestas */
+
+.respuestas {
+    margin-top: 3rem;
+    display: grid;
+    height: 18rem;
+    width: 75rem;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 6rem;
+}
+
+.respuesta {
+    position: relative;
+    max-width: 100%;
+    height: 4.5rem;
+    background-color: var(--blanco);
+}
+
+.seleccionador {
+    position: absolute;
+    display: flex;
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--morado-claro);
+    justify-content: center;
+    align-items: center;
+    top: -7%;
+}
+
+.sel {
+    height: 3rem;
+    width: 3rem;
+    accent-color: var(--morado-claro);
+    cursor: pointer;
+}
