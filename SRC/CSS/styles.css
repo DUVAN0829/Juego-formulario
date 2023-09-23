@@ -61,7 +61,8 @@ svg {
 /* * Imagén cine */
 .imagen-cine {
     display: block;
-    margin: 0 auto;
+    margin-left: 3.6rem;
+    margin-top: 0.5rem;
 }
 
 /* * Flechas */
@@ -86,13 +87,13 @@ svg {
     clip-path: polygon(0 0, 76% 0, 75% 70%, 0% 90%);
     position: absolute;
     left: -2.5%;
-    top: -8%;
+    top: -15%;
 }
 
 .pregunta {
     font-size: 3rem;
     text-align: center;
-    padding-top: 3rem;
+    padding: 3rem;
     font-family: var(--fuente-titulo);
 }
 
@@ -167,42 +168,6 @@ svg {
     background-color: #b25fbb;
 }
 
-.contenedor-superior {
-    border: 2px solid var(--morado-claro);
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: var(--blanco);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-radius: 1rem;
-}
-
-.contenedor-inferior {
-    display: flex;
-    column-gap: 2rem;
-    justify-content: center;
-}
-
-.elemento {
-    border: 1px solid var(--morado-claro);
-    padding: 10px;
-    background-color: var(--blanco);
-    border-radius: 10px;
-    margin: 4px;
-}
-
-.hueco {
-    border: 1px dashed var(--morado-oscuro);
-    display: inline-block;
-    min-width: 200px;
-    min-height: 40px;
-    margin-top: 1rem;
-}
-
-.elemento-desactivado {
-    opacity: 0.5;
-    pointer-events: none;
-}
-
 /* * Botones */
 .botones {
     margin-top: 3rem;
@@ -220,13 +185,55 @@ svg {
 }
 
 /* *Contenedor completar */
-.contenido{
+.contenido {
     width: 5rem;
     width: 5rem;
     border: dashed var(--negro) 2px;
 }
 
-span{
-    height: 5rem;
-    width: 8rem;
+.texto-completar {
+    text-align: left;
+}
+
+.contenedor-superior {
+    border: 5px solid var(--morado-claro);
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--blanco);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 1rem;
+}
+
+.contenedor-inferior {
+    display: flex;
+    column-gap: 2rem;
+    justify-content: center;
+}
+
+.elemento {
+    border: 2px solid var(--morado-claro);
+    padding: 10px;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    margin: 4px;
+    transition: 0.3s;
+    text-align: center;
+    cursor: pointer;
+}
+
+.elemento:hover {
+    transform: scale(0.9);
+}
+
+.hueco {
+    border: 1px dashed var(--morado-oscuro);
+    display: inline-block;
+    min-width: 200px;
+    min-height: 40px;
+    margin-top: 1rem;
+}
+
+.elemento-desactivado {
+    opacity: 0.5;
+    pointer-events: none;
 }

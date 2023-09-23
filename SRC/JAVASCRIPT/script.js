@@ -60,6 +60,6 @@ function drop(ev) {
   completar.appendChild(draggedElement);
 
   // Desactivar el elemento y cambiar su clase
-  
-  
+  draggedElement.classList.add("elemento-desactivado");
+  draggedElement.draggable = false;
 }
