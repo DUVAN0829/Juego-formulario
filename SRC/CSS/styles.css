@@ -2,6 +2,7 @@
 :root {
     --morado-oscuro: #4A154B;
     --morado-claro: #A94AB4;
+    --morado-claro2: #b25fbb;
     --blanco: #fff;
     --negro: #000;
 
@@ -160,12 +161,12 @@ svg {
 
 .respuesta:hover {
     border: 1px solid #3c0c3d;
-    background-color: #b25fbb;
+    background-color: var(--morado-claro2);
 }
 
 .active {
     border: 2px solid #3c0c3d;
-    background-color: #b25fbb;
+    background-color: var(--morado-claro2);
 }
 
 /* * Botones */
@@ -173,7 +174,7 @@ svg {
     margin-top: 3rem;
     display: flex;
     justify-content: center;
-    column-gap: 2rem;
+    column-gap: 3rem;
 }
 
 .anterior,
@@ -182,6 +183,13 @@ svg {
     font-size: 1.5rem;
     border: none;
     padding: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.anterior:hover,
+.siguiente:hover {
+    transform: scale(0.9);
 }
 
 /* *Contenedor completar */
@@ -197,11 +205,15 @@ svg {
 
 .contenedor-superior {
     border: 5px solid var(--morado-claro);
+    position: relative;
     padding: 20px;
     margin-bottom: 20px;
     background-color: var(--blanco);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 1rem;
+    max-width: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .contenedor-inferior {
@@ -212,9 +224,9 @@ svg {
 
 .elemento {
     border: 2px solid var(--morado-claro);
-    padding: 10px;
+    padding: 1rem;
     background-color: var(--blanco);
-    border-radius: 10px;
+    border-radius: 1rem;
     margin: 4px;
     transition: 0.3s;
     text-align: center;
@@ -223,17 +235,58 @@ svg {
 
 .elemento:hover {
     transform: scale(0.9);
+    background-color: var(--morado-claro2);
 }
 
 .hueco {
-    border: 1px dashed var(--morado-oscuro);
+    border: 2px dashed var(--morado-oscuro);
     display: inline-block;
-    min-width: 200px;
-    min-height: 40px;
+    min-width: 20rem;
+    min-height: 4rem;
     margin-top: 1rem;
 }
 
 .elemento-desactivado {
     opacity: 0.5;
     pointer-events: none;
+}
+
+/* *Adivinar imagen*/
+.adivinar-imagen {
+    width: 66rem;
+    height: 30rem;
+    position: relative;
+    border: solid var(--blanco) 2px;
+    background-color: var(--blanco);
+    font-family: var(--fuente-titulo);
+    border: solid var(--morado-claro) 5px;
+}
+
+.adivinar-imagen__texto {
+    font-size: 2.5rem;
+    padding-top: 2rem;
+}
+
+.contenedor-imagen {
+    width: 15rem;
+    height: 15rem;
+    border: dashed var(--morado-oscuro) 1px;
+    margin: 0 auto;
+}
+
+.imagen-seleccion {
+    margin-top: 3rem;
+    display: flex;
+    column-gap: 2rem;
+}
+
+.imagen-seleccion__hija {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 15rem;
+    background-color: var(--morado-claro);
+    border: solid var(--blanco) 5px;
+    border-radius: 1rem;
 }
